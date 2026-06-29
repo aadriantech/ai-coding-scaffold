@@ -4,9 +4,36 @@
 
 Portable **plan-before-code** infrastructure for Grok, Cursor, Claude Code, or any agentic IDE.
 
-Derived from [AstroSim](https://github.com/aadriantech/astrosim): **PDD → TDD → CDD → AYSU**.
-
 **Version 1.1.0** — team-ready with PR templates, CI gate, adoption guide.
+
+## How we built [AstroSim](https://github.com/aadriantech/astrosim) with this
+
+This scaffold is not theory — it is the **exact workflow** used to build [AstroSim](https://github.com/aadriantech/astrosim), an open-source space habitat simulator, from zero to **v1.2.0** (16 phases, 183 tests, public repo + docs site).
+
+Every AstroSim feature followed the same loop:
+
+```
+/pdd-plan  →  docs/plans/epic-phaseN.md   (numbered acceptance criteria)
+/tdd-implement  →  failing tests first, then src/
+/cdd-review  →  reviews/epic-phaseN.md    (critic approve before ship)
+/aysu-verify  →  confidence: high
+/memory-sync  →  section AGENT.md updated
+```
+
+**What that produced in AstroSim:**
+
+| Artifact | AstroSim example |
+|----------|------------------|
+| Plans before code | `docs/plans/epic-phase16.md` (reference validation) |
+| Distributed memory | 15 section `AGENT.md` files + `AGENT_INDEX.md` |
+| Contracts | 11 JSON schemas in `contracts/` |
+| Critic reviews | `reviews/epic-phase16.md` |
+| Grok skills | `.grok/skills/pdd-plan`, `tdd-implement`, etc. |
+| CI enforcement | `check_agent_sync.sh` + pytest in GitHub Actions |
+
+AstroSim grew the scaffold to **Tier 3** (per-module memory, contract tests, coverage gates). This repo gives you **Tier 0–2 out of the box** plus Tier 3 templates — copy it, then extend as your project matures.
+
+**Pipeline:** **PDD → TDD → CDD → AYSU** — no plan → no code.
 
 ## Quick start
 
