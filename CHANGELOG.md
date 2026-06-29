@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.1] - 2026-06-29
+
+### Added
+
+- `docs/DECISIONS.md` — RALF vs gated workflow (ADR-001), future policy-driven autonomous loop (ADR-002)
+
 ## [1.2.0] - 2026-06-29
 
 ### Added

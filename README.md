@@ -90,6 +90,7 @@ PDD (plan) → TDD (implement) → CDD (review) → AYSU (verify)
 | **[QUICKSTART.md](docs/QUICKSTART.md)** | **Start here** — 5 min bootstrap + first epic |
 | [CASE_STUDY_ASTROSIM.md](docs/CASE_STUDY_ASTROSIM.md) | How AstroSim was built (16 phases, live links) |
 | [COMPARE.md](docs/COMPARE.md) | vs spec-kit, BMAD, ad hoc Cursor rules |
+| [DECISIONS.md](docs/DECISIONS.md) | RALF vs gated workflow; future autonomous loop |
 | [METHODOLOGY.md](docs/METHODOLOGY.md) | Full PDD/TDD/CDD/AYSU reference |
 | [ADOPTION.md](docs/ADOPTION.md) | First-hour setup checklist |
 | [COMPLETENESS.md](docs/COMPLETENESS.md) | Tier 0–3 self-audit vs AstroSim |

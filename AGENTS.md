@@ -15,6 +15,8 @@
 
 Invoke skills: `/pdd-plan` → `/tdd-implement` → `/cdd-review` → `/aysu-verify`
 
+**RALF Loop is retired** in favor of this gated workflow. Rationale and future autonomous policy: [docs/DECISIONS.md](docs/DECISIONS.md).
+
 ## Task classes
 
 | Class | When | Pipeline |

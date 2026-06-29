@@ -4,6 +4,8 @@ Portable **plan-before-code** system for Grok, Cursor, Claude Code, or any agent
 
 Derived from [AstroSim](https://github.com/aadriantech/astrosim). Five ideas: **pipeline**, **skills**, **memory**, **indexing**, **contracts**.
 
+**Why not RALF Loop?** We retired fully autonomous loops for gated PDD→TDD→CDD→AYSU. See [DECISIONS.md](DECISIONS.md) for rationale and a proposed policy-driven autonomous path (RALF v2).
+
 ---
 
 ## 1. The pipeline (PDD → TDD → CDD → AYSU)
