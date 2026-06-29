@@ -4,24 +4,18 @@ First-hour setup for a new repo using this scaffold.
 
 ## 1. Bootstrap (5 min)
 
-```bash
-git clone git@github.com:aadriantech/ai-coding-scaffold.git /tmp/ai-coding-scaffold
-cd your-project
+**Option A — script (recommended):**
 
-# Option A: run /scaffold-init in Grok
-# Option B: copy manually:
-cp -r /tmp/ai-coding-scaffold/.grok ./
-cp /tmp/ai-coding-scaffold/{AGENTS.md,AGENT_INDEX.md,AGENT_TEMPLATE.md,CONTRIBUTING.md} ./
-cp -r /tmp/ai-coding-scaffold/.github ./
-mkdir -p docs/plans contracts reviews scripts tests
-cp /tmp/ai-coding-scaffold/docs/{PRD.md,SRD.md,ADOPTION.md,METHODOLOGY.md} docs/
-cp /tmp/ai-coding-scaffold/docs/plans/TEMPLATE.md docs/plans/
-cp /tmp/ai-coding-scaffold/contracts/* contracts/
-cp /tmp/ai-coding-scaffold/scripts/* scripts/
-cp /tmp/ai-coding-scaffold/tests/AGENT.md tests/
-cp /tmp/ai-coding-scaffold/reviews/TEMPLATE.md reviews/
-chmod +x scripts/*.sh
+```bash
+git clone git@github.com:aadriantech/ai-coding-scaffold.git /tmp/scaffold
+cd your-project   # must already be a git repo or project directory
+bash /tmp/scaffold/scripts/scaffold_init.sh .
+bash scripts/self_test.sh   # optional — verifies all 35 files copied
 ```
+
+**Option B — Grok:** run `/scaffold-init` in your project (same result).
+
+**Option C — manual:** only if you need a subset; see `scripts/scaffold_init.sh` for the full file list.
 
 ## 2. Customize (10 min)
 
