@@ -206,17 +206,11 @@ AYSU:
 ## 9. Bootstrap a new project
 
 ```bash
-git clone git@github.com:aadriantech/ai-coding-scaffold.git
+git clone git@github.com:aadriantech/ai-coding-scaffold.git /tmp/scaffold
 cd your-project
-cp -r ../ai-coding-scaffold/.grok ./
-cp ../ai-coding-scaffold/{AGENTS.md,AGENT_INDEX.md,AGENT_TEMPLATE.md} ./
-mkdir -p docs/plans contracts reviews scripts
-cp ../ai-coding-scaffold/docs/plans/TEMPLATE.md docs/plans/
-cp ../ai-coding-scaffold/contracts/* contracts/
-cp ../ai-coding-scaffold/scripts/check_agent_sync.sh scripts/
-chmod +x scripts/check_agent_sync.sh
-# Customize AGENT_INDEX.md for your domains
+bash /tmp/scaffold/scripts/scaffold_init.sh .
 bash scripts/check_agent_sync.sh
+bash scripts/self_test.sh   # verifies round-trip bootstrap
 ```
 
-Or run `/scaffold-init` inside your repo.
+Or run `/scaffold-init` in Grok. See [ADOPTION.md](ADOPTION.md) and [COMPLETENESS.md](COMPLETENESS.md).
