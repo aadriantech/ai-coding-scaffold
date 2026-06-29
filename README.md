@@ -4,7 +4,7 @@
 
 Portable **plan-before-code** infrastructure for Grok, Cursor, Claude Code, or any agentic IDE.
 
-**Version 1.1.0** — team-ready with PR templates, CI gate, adoption guide.
+**Version 1.2.0** — team-ready + case study, quickstart, competitor comparison.
 
 ## How we built [AstroSim](https://github.com/aadriantech/astrosim) with this
 
@@ -37,13 +37,14 @@ AstroSim grew the scaffold to **Tier 3** (per-module memory, contract tests, cov
 
 ## Quick start
 
+→ **[docs/QUICKSTART.md](docs/QUICKSTART.md)** (full walkthrough)
+
 ```bash
-# Bootstrap into your project
 git clone git@github.com:aadriantech/ai-coding-scaffold.git /tmp/scaffold
 cd your-project
 bash /tmp/scaffold/scripts/scaffold_init.sh .
-# Customize docs/PRD.md, AGENTS.md, .github/workflows/ci.yml
 bash scripts/check_agent_sync.sh
+/pdd-plan   # first epic
 ```
 
 Or in Grok: **`/scaffold-init`**
@@ -86,6 +87,9 @@ PDD (plan) → TDD (implement) → CDD (review) → AYSU (verify)
 
 | Doc | Description |
 |-----|-------------|
+| **[QUICKSTART.md](docs/QUICKSTART.md)** | **Start here** — 5 min bootstrap + first epic |
+| [CASE_STUDY_ASTROSIM.md](docs/CASE_STUDY_ASTROSIM.md) | How AstroSim was built (16 phases, live links) |
+| [COMPARE.md](docs/COMPARE.md) | vs spec-kit, BMAD, ad hoc Cursor rules |
 | [METHODOLOGY.md](docs/METHODOLOGY.md) | Full PDD/TDD/CDD/AYSU reference |
 | [ADOPTION.md](docs/ADOPTION.md) | First-hour setup checklist |
 | [COMPLETENESS.md](docs/COMPLETENESS.md) | Tier 0–3 self-audit vs AstroSim |

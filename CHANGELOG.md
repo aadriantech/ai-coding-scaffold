@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.0] - 2026-06-29
+
+### Added
+
+- `docs/QUICKSTART.md` — 5-minute bootstrap + first epic walkthrough
+- `docs/CASE_STUDY_ASTROSIM.md` — 16-phase proof with live AstroSim links
+- `docs/COMPARE.md` — honest comparison vs spec-kit, BMAD, ad hoc rules
+- Annotated `docs/plans/epic-example.md` with section "Why" guides
+- `reviews/example-approved.md` — sample critic output
+
 ## [1.1.0] - 2026-06-29
 
 ### Added

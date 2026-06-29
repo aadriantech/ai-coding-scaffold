@@ -53,6 +53,7 @@ copy_file "$SOURCE/contracts/critic_review.schema.md" "$TARGET/contracts/critic_
 copy_file "$SOURCE/contracts/api.schema.template.json" "$TARGET/contracts/api.schema.template.json"
 
 copy_file "$SOURCE/reviews/TEMPLATE.md" "$TARGET/reviews/TEMPLATE.md"
+copy_file "$SOURCE/reviews/example-approved.md" "$TARGET/reviews/example-approved.md"
 copy_file "$SOURCE/tests/AGENT.md" "$TARGET/tests/AGENT.md"
 copy_file "$SOURCE/src/AGENT.md" "$TARGET/src/AGENT.md"
 

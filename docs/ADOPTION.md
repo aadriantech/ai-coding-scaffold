@@ -39,6 +39,8 @@ Push to GitHub — `ci.yml` runs `check_agent_sync.sh` on PR/push.
 
 ## 4. First task (30 min)
 
+See [QUICKSTART.md](QUICKSTART.md) for the full walkthrough with expected outputs.
+
 1. `/pdd-plan` → `docs/plans/epic-hello.md` (one small feature)
 2. `/tdd-implement`
 3. `/cdd-review` (if T2)
