@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+# Copy agent scaffolding into current repo (non-Grok bootstrap).
+set -euo pipefail
+
+SOURCE="${SCAFFOLD_SOURCE:-$(cd "$(dirname "$0")/.." && pwd)}"
+TARGET="${1:-.}"
+TARGET="$(cd "$TARGET" && pwd)"
+FORCE="${FORCE:-0}"
+
+copy_file() {
+  local src="$1" dst="$2"
+  if [[ -f "$dst" && "$FORCE" != "1" ]]; then
+    echo "SKIP (exists): $dst"
+    return
+  fi
+  mkdir -p "$(dirname "$dst")"
+  cp "$src" "$dst"
+  echo "COPY: $dst"
+}
+
+copy_tree() {
+  local src="$1" dst="$2"
+  if [[ -e "$dst" && "$FORCE" != "1" ]]; then
+    echo "SKIP (exists): $dst"
+    return
+  fi
+  mkdir -p "$(dirname "$dst")"
+  cp -r "$src" "$dst"
+  echo "COPY: $dst"
+}
+
+echo "Scaffold source: $SOURCE"
+echo "Target: $TARGET"
+
+copy_tree "$SOURCE/.grok" "$TARGET/.grok"
+copy_tree "$SOURCE/.cursor" "$TARGET/.cursor"
+copy_tree "$SOURCE/.github" "$TARGET/.github"
+
+for f in AGENTS.md AGENT_INDEX.md AGENT_TEMPLATE.md CONTRIBUTING.md CLAUDE.md CHANGELOG.md; do
+  copy_file "$SOURCE/$f" "$TARGET/$f"
+done
+
+mkdir -p "$TARGET/docs/plans" "$TARGET/contracts" "$TARGET/reviews" "$TARGET/scripts" "$TARGET/tests" "$TARGET/src"
+
+for f in METHODOLOGY.md ADOPTION.md COMPLETENESS.md PRD.md SRD.md ROADMAP.md; do
+  copy_file "$SOURCE/docs/$f" "$TARGET/docs/$f"
+done
+copy_file "$SOURCE/docs/plans/TEMPLATE.md" "$TARGET/docs/plans/TEMPLATE.md"
+copy_file "$SOURCE/docs/plans/epic-example.md" "$TARGET/docs/plans/epic-example.md"
+
+copy_file "$SOURCE/contracts/README.md" "$TARGET/contracts/README.md"
+copy_file "$SOURCE/contracts/critic_review.schema.md" "$TARGET/contracts/critic_review.schema.md"
+copy_file "$SOURCE/contracts/api.schema.template.json" "$TARGET/contracts/api.schema.template.json"
+
+copy_file "$SOURCE/reviews/TEMPLATE.md" "$TARGET/reviews/TEMPLATE.md"
+copy_file "$SOURCE/tests/AGENT.md" "$TARGET/tests/AGENT.md"
+copy_file "$SOURCE/src/AGENT.md" "$TARGET/src/AGENT.md"
+
+for f in check_agent_sync.sh integrity_check.sh scaffold_init.sh self_test.sh; do
+  copy_file "$SOURCE/scripts/$f" "$TARGET/scripts/$f"
+done
+chmod +x "$TARGET/scripts/"*.sh 2>/dev/null || true
+
+echo ""
+echo "Done. Next:"
+echo "  1. Customize docs/PRD.md, AGENTS.md, .github/workflows/ci.yml"
+echo "  2. bash scripts/check_agent_sync.sh"
+echo "  3. /pdd-plan for first epic"

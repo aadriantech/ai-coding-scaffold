@@ -12,33 +12,38 @@ metadata:
 
 ## When
 
-User wants PDD→TDD→CDD→AYSU in a repo that lacks it, or wants to copy from ai-coding-scaffold.
+User wants PDD→TDD→CDD→AYSU in a repo that lacks it.
 
 ## Steps
 
-1. Confirm repo root (look for `.git` or user-specified path).
-2. Copy if missing (do not overwrite without `--force`):
-   - `AGENTS.md`, `AGENT_INDEX.md`, `AGENT_TEMPLATE.md`
-   - `docs/plans/TEMPLATE.md`
-   - `contracts/README.md`, `contracts/critic_review.schema.md`
-   - `scripts/check_agent_sync.sh`
-   - `.grok/skills/` (pdd-plan, tdd-implement, cdd-review, aysu-verify, memory-sync)
-3. `chmod +x scripts/check_agent_sync.sh`
-4. Create `reviews/` directory.
-5. Customize `AGENT_INDEX.md` for project domains.
-6. Add `<!-- CUSTOMIZE -->` sections in `AGENTS.md` (language, test runner).
-7. Run `bash scripts/check_agent_sync.sh`.
+1. Confirm repo root (`.git` or user path).
+2. Prefer script: `bash /path/to/ai-coding-scaffold/scripts/scaffold_init.sh .`
+   Or copy from `git@github.com:aadriantech/ai-coding-scaffold.git`
+3. Do **not** overwrite customized files without `--force` / user confirmation.
+4. User must customize:
+   - `AGENTS.md` stack conventions
+   - `docs/PRD.md`, `docs/SRD.md`
+   - `tests/AGENT.md` test runner
+   - `.github/workflows/ci.yml` real test job
+5. Run `bash scripts/check_agent_sync.sh` (trim REQUIRED list if project is minimal Tier 1).
 
-## Source template
+## Files copied
 
-- Repo: `git@github.com:aadriantech/ai-coding-scaffold.git`
-- Local: clone or use files from `ai-coding-scaffold/` in workspace
+- Core: `AGENTS.md`, `AGENT_INDEX.md`, `AGENT_TEMPLATE.md`, `CONTRIBUTING.md`, `CLAUDE.md`
+- Docs: `METHODOLOGY.md`, `ADOPTION.md`, `PRD.md`, `SRD.md`, `plans/TEMPLATE.md`
+- GitHub: `.github/` (PR template, issue templates, workflows)
+- Skills: `.grok/skills/`
+- Cursor: `.cursor/rules/ai-coding.mdc`
+- Stubs: `src/AGENT.md`, `tests/AGENT.md`
+- Scripts: `check_agent_sync.sh`, `integrity_check.sh`
+- Contracts: `contracts/README.md`, `critic_review.schema.md`
+- Reviews: `reviews/TEMPLATE.md`
 
 ## Must not
 
-- Overwrite existing customized AGENTS.md without confirmation
 - Add application code
+- Overwrite existing `AGENTS.md` without confirmation
 
 ## Output
 
-List of files created + next step: "Run `/pdd-plan` for first epic."
+Files created + next: customize PRD → `/pdd-plan` for first epic.

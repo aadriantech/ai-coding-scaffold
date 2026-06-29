@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  agent-memory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check agent memory files
+        run: bash scripts/check_agent_sync.sh
+
+      - name: Self-test bootstrap script
+        run: bash scripts/self_test.sh
+
+  # CUSTOMIZE: add test job for your project
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - run: pytest -q

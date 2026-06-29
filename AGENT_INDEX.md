@@ -8,9 +8,9 @@
 | ID | Domain | Path | Load when… |
 |----|--------|------|------------|
 | ROOT | Operating rules | [AGENTS.md](AGENTS.md) | Every new session |
-| PKG | Package / app entry | `src/AGENT.md` | Public API, CLI |
-| TST | Tests | `tests/AGENT.md` | TDD, coverage |
-| CIC | CI/CD | `.github/AGENT.md` | Workflows, release |
+| PKG | Package / app entry | [src/AGENT.md](src/AGENT.md) | Public API, CLI |
+| TST | Tests | [tests/AGENT.md](tests/AGENT.md) | TDD, coverage |
+| CIC | CI/CD | [.github/AGENT.md](.github/AGENT.md) | Workflows, release |
 | CON | Contracts | [contracts/README.md](contracts/README.md) | Schemas, API shapes |
 
 <!-- ADD ROWS as domains grow. Example:

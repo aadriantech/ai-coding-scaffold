@@ -1,0 +1,18 @@
+---
+description: AI coding methodology — PDD, TDD, CDD, AYSU, distributed memory
+globs:
+alwaysApply: true
+---
+
+Read AGENTS.md for strict workflow: PDD → TDD → CDD → AYSU.
+
+Session routing:
+1. AGENT_INDEX.md — load only listed section AGENT.md files
+2. One primary domain AGENT.md (+ max 2 secondary)
+3. docs/plans/ before implementation (T1+)
+
+Gates: no plan → no code; no green tests → no CDD; no approve → no AYSU.
+
+Contracts in contracts/ are canonical — section AGENT.md links, never duplicates.
+
+Full reference: docs/METHODOLOGY.md

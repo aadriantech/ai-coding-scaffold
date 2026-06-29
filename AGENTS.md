@@ -69,4 +69,7 @@ AYSU:
 ## Related
 
 - Index: [AGENT_INDEX.md](AGENT_INDEX.md)
+- Contributing: [CONTRIBUTING.md](CONTRIBUTING.md)
+- Adoption: [docs/ADOPTION.md](docs/ADOPTION.md)
+- Completeness: [docs/COMPLETENESS.md](docs/COMPLETENESS.md)
 - Section template: [AGENT_TEMPLATE.md](AGENT_TEMPLATE.md)

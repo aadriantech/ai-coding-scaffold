@@ -20,8 +20,9 @@ metadata:
 1. Identify affected AGENT_INDEX ID(s).
 2. Update section AGENT.md: §Gotchas, §Verification status, `Last verified` + commit sha.
 3. Do **not** duplicate contracts — link `contracts/` instead.
-4. Update AGENT_INDEX `Last synced` if domains added/removed.
-5. Run `scripts/check_agent_sync.sh`.
+4. Update AGENT_INDEX `Last synced` date; add row if new domain.
+5. If new section `AGENT.md` is required for CI: add path to `scripts/check_agent_sync.sh` REQUIRED array.
+6. Run `bash scripts/check_agent_sync.sh`.
 
 ## Rules
 
