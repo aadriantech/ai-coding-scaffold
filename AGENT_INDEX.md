@@ -1,0 +1,27 @@
+# AGENT_INDEX
+
+> **Read this first** to route context. Load only listed section files.
+
+**Last synced:** YYYY-MM-DD  
+**Sync policy:** Run `scripts/check_agent_sync.sh` after adding domains
+
+| ID | Domain | Path | Load when… |
+|----|--------|------|------------|
+| ROOT | Operating rules | [AGENTS.md](AGENTS.md) | Every new session |
+| PKG | Package / app entry | `src/AGENT.md` | Public API, CLI |
+| TST | Tests | `tests/AGENT.md` | TDD, coverage |
+| CIC | CI/CD | `.github/AGENT.md` | Workflows, release |
+| CON | Contracts | [contracts/README.md](contracts/README.md) | Schemas, API shapes |
+
+<!-- ADD ROWS as domains grow. Example:
+| ENG | Core engine | src/engine/AGENT.md | Core logic, state |
+-->
+
+## Load combinations
+
+| Work type | Primary | Secondary (max 2) |
+|-----------|---------|-------------------|
+| New feature | PKG | TST, CON |
+| Bugfix | _domain_ | TST |
+| CI / release | CIC | TST, ROOT |
+| Docs only | ROOT | — |
