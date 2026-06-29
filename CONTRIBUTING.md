@@ -56,3 +56,7 @@ Use the PR template (`.github/pull_request_template.md`). T2+ requires critic `r
 ## First-time setup
 
 See [docs/ADOPTION.md](docs/ADOPTION.md).
+
+## Sharing this project
+
+Copy-paste posts for X, Reddit, Hacker News, LinkedIn: [docs/SHARE.md](docs/SHARE.md).
