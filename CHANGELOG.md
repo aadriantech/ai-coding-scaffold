@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.3.0] - 2026-07-01
+
+### Added
+
+- **Vitest** unit tests on demo `src/lib/` (`greet`, `slugify`) with **≥90% coverage** gate
+- **Playwright** e2e tests against `demo/index.html`
+- `scripts/check_coverage.sh`, `npm run validate`
+- `package.json`, `vitest.config.ts`, `playwright.config.ts`, `tsconfig.json`
+- CI `test` job: coverage + Playwright (Chromium)
+- `scaffold_init.sh` copies test toolchain + demo sources
+
 ## [1.2.2] - 2026-06-29
 
 ### Added

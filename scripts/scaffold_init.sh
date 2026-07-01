@@ -58,10 +58,21 @@ copy_file "$SOURCE/reviews/example-approved.md" "$TARGET/reviews/example-approve
 copy_file "$SOURCE/tests/AGENT.md" "$TARGET/tests/AGENT.md"
 copy_file "$SOURCE/src/AGENT.md" "$TARGET/src/AGENT.md"
 
-for f in check_agent_sync.sh integrity_check.sh scaffold_init.sh self_test.sh; do
+for f in check_agent_sync.sh check_coverage.sh integrity_check.sh scaffold_init.sh self_test.sh; do
   copy_file "$SOURCE/scripts/$f" "$TARGET/scripts/$f"
 done
 chmod +x "$TARGET/scripts/"*.sh 2>/dev/null || true
+
+for f in package.json package-lock.json tsconfig.json vitest.config.ts playwright.config.ts; do
+  copy_file "$SOURCE/$f" "$TARGET/$f"
+done
+
+copy_tree "$SOURCE/demo" "$TARGET/demo"
+copy_tree "$SOURCE/e2e" "$TARGET/e2e"
+mkdir -p "$TARGET/src/lib"
+for f in greet.ts slug.ts greet.test.ts slug.test.ts; do
+  copy_file "$SOURCE/src/lib/$f" "$TARGET/src/lib/$f"
+done
 
 echo ""
 echo "Done. Next:"

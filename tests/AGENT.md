@@ -1,14 +1,15 @@
 # AGENT — Tests
 
 **Scope:** Test suite, TDD discipline, coverage.  
-**Owns:** `tests/**`  
+**Owns:** `src/**/*.test.ts`, `e2e/**`  
 **Depends on:** ROOT  
-**Last verified:** YYYY-MM-DD · baseline
+**Last verified:** 2026-07-01 · Vitest + Playwright baseline
 
 ## Conventions
 
-<!-- CUSTOMIZE: test runner, coverage target -->
-- Run: `pytest tests/ -q` (or project equivalent)
+- **Unit:** Vitest — `npm test` / `npm run test:coverage` (≥90% on `src/lib/`)
+- **E2E:** Playwright — `npm run test:e2e` (serves `demo/` on port 5173)
+- **Gate:** `bash scripts/check_coverage.sh` (CI + `npm run validate`)
 - One concern per test; name describes behavior
 - No live network/external APIs in CI unless explicitly marked integration
 - Fix application code, not tests, when requirement is stable
@@ -17,16 +18,17 @@
 
 | Pattern | Purpose |
 |---------|---------|
-| `test_<module>.py` | Unit tests |
-| `test_contracts_*.py` | Schema / interface contract tests |
-| `test_integration_*.py` | Cross-module flows |
+| `src/lib/*.test.ts` | Unit tests (colocated) |
+| `e2e/*.spec.ts` | Browser smoke / user flows |
+| `test_contracts_*.ts` | Schema / interface contract tests (add per project) |
 
 ## Verification status
 
 | Claim | Status |
 |-------|--------|
 | TDD: failing test before implementation | VERIFIED — process |
-| CI runs test suite | UNVERIFIED — configure in `.github/workflows/` |
+| CI runs unit + e2e suite | VERIFIED — `.github/workflows/ci.yml` |
+| Coverage ≥ 90% on `src/lib/` | VERIFIED — Vitest thresholds |
 
 ## Do not
 

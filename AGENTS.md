@@ -6,7 +6,7 @@
 
 | Step | Name | Artifact | Gate |
 |------|------|----------|------|
-| 1 | **PDD** | `docs/plans/<epic>.md` | Plan complete; acceptance criteria numbered |
+| 1 | **PDD** | `docs/plans/<epic>.md` | Plan complete; acceptance criteria numbered; implementation tasks at `1.1.1.1` depth |
 | 2 | **TDD** | `tests/` | Failing test first → green → refactor |
 | 3 | **CDD** | `reviews/<task-id>.md` | 0 open critical/high findings |
 | 4 | **AYSU** | PR / session summary | Structured block; confidence = high |
@@ -47,10 +47,11 @@ Default unknown tasks to **T2**.
 
 ## Stack conventions
 
-<!-- CUSTOMIZE: language, layout, test runner, style -->
-- Language: _e.g. Python 3.10+, src/ layout_
-- Tests: _e.g. pytest_
-- Type hints / docstrings on public APIs
+<!-- CUSTOMIZE: replace demo lib when your app grows -->
+- **Language:** TypeScript 6.x, `src/lib/` layout (demo utilities — swap for your stack)
+- **Unit tests:** Vitest — `npm test`, `npm run test:coverage` (≥90% on `src/lib/`)
+- **E2E:** Playwright — `npm run test:e2e` (serves `demo/` locally)
+- **Validate:** `npm run validate` (coverage gate + e2e)
 - Fix `src/`, not tests, when requirements are stable
 
 ## AYSU checklist (required before done)

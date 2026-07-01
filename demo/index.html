@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Scaffold Demo</title>
+	</head>
+	<body>
+		<main>
+			<h1>AI Coding Scaffold</h1>
+			<p data-testid="tagline">Plan before code.</p>
+			<button id="cta" type="button">Get Started</button>
+		</main>
+		<script>
+			document.getElementById('cta').addEventListener('click', () => {
+				document.querySelector('[data-testid="tagline"]').textContent = 'TDD next.';
+			});
+		</script>
+	</body>
+</html>

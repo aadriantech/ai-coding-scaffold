@@ -19,7 +19,7 @@ bash scripts/check_agent_sync.sh
 Expected output:
 
 ```
-Agent memory check OK (35 files)
+Agent memory check OK (39 files)
 ```
 
 Optional:
@@ -57,7 +57,7 @@ Add a --version flag to the CLI that prints the package version.
 
 Or copy `docs/plans/epic-example.md` → `docs/plans/epic-hello.md` and edit.
 
-**Gate:** `status: ready` in frontmatter + numbered acceptance criteria.
+**Gate:** `status: ready` in frontmatter + numbered acceptance criteria + 4-level implementation tasks (`1.1.1.1`).
 
 **Good criterion:**
 

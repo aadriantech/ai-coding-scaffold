@@ -40,8 +40,9 @@ Section template: [AGENT_TEMPLATE.md](AGENT_TEMPLATE.md)
 
 ```bash
 bash scripts/check_agent_sync.sh
-# run project test suite (e.g. pytest, npm test, cargo test)
-bash scripts/integrity_check.sh   # if present — pre-release gate
+npm ci
+npm run validate   # >= 90% unit coverage + Playwright e2e
+bash scripts/integrity_check.sh   # pre-release gate
 ```
 
 ## Pull requests

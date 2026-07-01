@@ -10,7 +10,7 @@ First-hour setup for a new repo using this scaffold.
 git clone git@github.com:aadriantech/ai-coding-scaffold.git /tmp/scaffold
 cd your-project   # must already be a git repo or project directory
 bash /tmp/scaffold/scripts/scaffold_init.sh .
-bash scripts/self_test.sh   # optional — verifies all 35 files copied
+bash scripts/self_test.sh   # optional — verifies scaffold copy + agent sync
 ```
 
 **Option B — Grok:** run `/scaffold-init` in your project (same result).
@@ -27,7 +27,7 @@ bash scripts/self_test.sh   # optional — verifies all 35 files copied
 | `docs/SRD.md` | Write technical requirements |
 | `tests/AGENT.md` | Set test runner command |
 | `.github/AGENT.md` | Document your CI workflows |
-| `.github/workflows/ci.yml` | Add project test job (copy template if provided) |
+| `.github/workflows/ci.yml` | Already includes Vitest + Playwright — adapt `src/lib/` and `e2e/` to your app |
 
 ## 3. Verify (2 min)
 

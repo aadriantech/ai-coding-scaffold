@@ -1,0 +1,10 @@
+/** Convert arbitrary text to a URL-safe slug. */
+export function slugify(text: string): string {
+	return text
+		.trim()
+		.toLowerCase()
+		.replace(/[^\w\s-]/g, '')
+		.replace(/\s+/g, '-')
+		.replace(/-+/g, '-')
+		.replace(/^-|-$/g, '');
+}

@@ -4,7 +4,7 @@
 
 Portable **plan-before-code** infrastructure for Grok, Cursor, Claude Code, or any agentic IDE.
 
-**Version 1.2.0** — team-ready + case study, quickstart, competitor comparison.
+**Version 1.3.0** — Vitest unit tests (≥90% coverage) + Playwright e2e, enforced in CI.
 
 ## How we built [AstroSim](https://github.com/aadriantech/astrosim) with this
 
@@ -29,7 +29,7 @@ Every AstroSim feature followed the same loop:
 | Contracts | 11 JSON schemas in `contracts/` |
 | Critic reviews | `reviews/epic-phase16.md` |
 | Grok skills | `.grok/skills/pdd-plan`, `tdd-implement`, etc. |
-| CI enforcement | `check_agent_sync.sh` + pytest in GitHub Actions |
+| CI enforcement | `check_agent_sync.sh` + Vitest coverage gate + Playwright in GitHub Actions |
 
 AstroSim grew the scaffold to **Tier 3** (per-module memory, contract tests, coverage gates). This repo gives you **Tier 0–2 out of the box** plus Tier 3 templates — copy it, then extend as your project matures.
 
@@ -68,7 +68,8 @@ PDD (plan) → TDD (implement) → CDD (review) → AYSU (verify)
 | **Memory stubs** | `src/AGENT.md`, `tests/AGENT.md`, `.github/AGENT.md` |
 | **Enforcement** | `.github/pull_request_template.md`, `.github/workflows/ci.yml` |
 | **Issues** | `.github/ISSUE_TEMPLATE/` |
-| **Scripts** | `check_agent_sync.sh`, `integrity_check.sh`, `scaffold_init.sh` |
+| **Tests** | Vitest (`src/lib/*.test.ts`), Playwright (`e2e/`), `demo/` static page |
+| **Scripts** | `check_agent_sync.sh`, `check_coverage.sh`, `integrity_check.sh`, `scaffold_init.sh` |
 | **Multi-tool** | `CLAUDE.md`, `.cursor/rules/ai-coding.mdc` |
 | **Skills** | `.grok/skills/` — pdd-plan, tdd-implement, cdd-review, aysu-verify, memory-sync, scaffold-init |
 
@@ -104,7 +105,7 @@ PDD (plan) → TDD (implement) → CDD (review) → AYSU (verify)
 | 0 | Minimum viable agent workflow | ✅ |
 | 1 | Solo developer | ✅ |
 | 2 | Team + PR workflow | ✅ |
-| 3 | Production (per-module memory, contracts, coverage) | Templates + CUSTOMIZE stubs |
+| 3 | Production (per-module memory, contracts, coverage) | ✅ Coverage + e2e in CI; extend per project |
 
 See [docs/COMPLETENESS.md](docs/COMPLETENESS.md) for full checklist.
 

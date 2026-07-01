@@ -2,7 +2,7 @@
 
 > **Read this first** to route context. Load only listed section files.
 
-**Last synced:** YYYY-MM-DD  
+**Last synced:** 2026-07-01  
 **Sync policy:** Run `scripts/check_agent_sync.sh` after adding domains
 
 | ID | Domain | Path | Load when… |

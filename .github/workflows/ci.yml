@@ -13,13 +13,22 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check agent memory files
         run: bash scripts/check_agent_sync.sh
-
       - name: Self-test bootstrap script
         run: bash scripts/self_test.sh
 
-  # CUSTOMIZE: add test job for your project
-  # test:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v4
-  #     - run: pytest -q
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install deps
+        run: npm ci
+      - name: Unit tests with >= 90% coverage
+        run: bash scripts/check_coverage.sh
+      - name: Install Playwright browser
+        run: npx playwright install --with-deps chromium
+      - name: E2E tests (Playwright)
+        run: npm run test:e2e

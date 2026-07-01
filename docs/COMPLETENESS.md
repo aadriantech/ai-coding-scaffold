@@ -29,14 +29,14 @@ Based on [AstroSim](https://github.com/aadriantech/astrosim) production experien
 
 ## Tier 3 — Production parity (AstroSim-level)
 
-- [ ] `.github/workflows/ci.yml` with real test suite
+- [x] `.github/workflows/ci.yml` with real test suite
 - [ ] `scripts/integrity_check.sh` extended
 - [ ] Per-module `src/*/AGENT.md` + AGENT_INDEX rows
 - [ ] `contracts/*.schema.json` + `test_contracts_*.py`
 - [ ] `docs/ROADMAP.md` phase tracking
 - [ ] Issue templates
 - [ ] `CLAUDE.md` / `.cursor/rules/` for multi-tool
-- [ ] Coverage gate in CI
+- [x] Coverage gate in CI (`scripts/check_coverage.sh`, ≥90%)
 
 ## This repo (ai-coding-scaffold)
 
@@ -45,7 +45,7 @@ Based on [AstroSim](https://github.com/aadriantech/astrosim) production experien
 | 0 | ✅ Complete |
 | 1 | ✅ Complete |
 | 2 | ✅ Complete |
-| 3 | ✅ Templates provided; app-specific items are CUSTOMIZE stubs |
+| 3 | ✅ Demo test suite + coverage/e2e CI; extend schemas and per-module memory per project |
 
 ## Gaps intentionally left to each project
 

@@ -9,9 +9,6 @@ echo "== Agent memory =="
 bash scripts/check_agent_sync.sh
 
 echo "== Test suite =="
-# CUSTOMIZE: uncomment and adapt
-# pytest -q
-# npm test
-# cargo test
+npm run validate
 
 echo "INTEGRITY OK"
