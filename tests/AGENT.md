@@ -8,7 +8,8 @@
 ## Conventions
 
 - **Unit:** Vitest — `npm test` / `npm run test:coverage` (≥90% on `src/lib/`)
-- **E2E:** Playwright — `npm run test:e2e` (serves `demo/` on port 5173)
+- **E2E (CI):** Playwright — `npm run test:e2e` (serves `demo/` on port 5173)
+- **UI (Grok):** MCP Playwright — `/ui-verify` skill; `grok mcp doctor playwright`
 - **Gate:** `bash scripts/check_coverage.sh` (CI + `npm run validate`)
 - One concern per test; name describes behavior
 - No live network/external APIs in CI unless explicitly marked integration

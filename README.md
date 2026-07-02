@@ -4,7 +4,7 @@
 
 Portable **plan-before-code** infrastructure for Grok, Cursor, Claude Code, or any agentic IDE.
 
-**Version 1.3.2** — Vitest + Playwright, `TASKLIST.md` backlog template, monorepo customize guide.
+**Version 1.3.3** — Grok MCP Playwright (`/ui-verify`) + npm e2e regression gates.
 
 ## How we built [AstroSim](https://github.com/aadriantech/astrosim) with this
 
@@ -73,7 +73,8 @@ PDD (plan) → TDD (implement) → CDD (review) → AYSU (verify)
 | **Tests** | Vitest (`src/lib/*.test.ts`), Playwright (`e2e/`), `demo/` static page |
 | **Scripts** | `check_agent_sync.sh`, `check_coverage.sh`, `integrity_check.sh`, `scaffold_init.sh` |
 | **Multi-tool** | `CLAUDE.md`, `.cursor/rules/ai-coding.mdc` |
-| **Skills** | `.grok/skills/` — pdd-plan, tdd-implement, cdd-review, aysu-verify, memory-sync, scaffold-init |
+| **Skills** | `.grok/skills/` — pdd-plan, tdd-implement, cdd-review, ui-verify, aysu-verify, memory-sync, scaffold-init |
+| **MCP** | `.grok/config.toml` — Playwright MCP for Grok UI checks + screenshots |
 
 ## Skills
 
@@ -82,6 +83,7 @@ PDD (plan) → TDD (implement) → CDD (review) → AYSU (verify)
 | `pdd-plan` | `/pdd-plan` — write plan before code |
 | `tdd-implement` | `/tdd-implement` — tests first |
 | `cdd-review` | `/cdd-review` — adversarial review |
+| `ui-verify` | `/ui-verify` — MCP Playwright browse + screenshots |
 | `aysu-verify` | `/aysu-verify` — done gate |
 | `memory-sync` | `/memory-sync` — update section AGENT.md |
 | `scaffold-init` | `/scaffold-init` — bootstrap repo |
@@ -99,6 +101,7 @@ PDD (plan) → TDD (implement) → CDD (review) → AYSU (verify)
 | [ADOPTION.md](docs/ADOPTION.md) | First-hour setup checklist |
 | [COMPLETENESS.md](docs/COMPLETENESS.md) | Tier 0–3 self-audit vs AstroSim |
 | [CUSTOMIZE_MONOREPO.md](docs/CUSTOMIZE_MONOREPO.md) | Adapt agent memory + CI for `apps/*` repos |
+| [MCP_UI_VALIDATION.md](docs/MCP_UI_VALIDATION.md) | Grok + Playwright MCP before human validation |
 | [CHANGELOG.md](CHANGELOG.md) | Release history |
 
 ## Completeness tiers

@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.3] - 2026-07-02
+
+### Added
+
+- **Grok MCP Playwright** — `.grok/config.toml` with `--caps=vision` + `playwright-mcp-output/`
+- **`/ui-verify` skill** — MCP browse, snapshot, screenshot workflow before human validation
+- `docs/MCP_UI_VALIDATION.md` — setup, Grok prompts, two-layer testing (MCP + npm e2e)
+
 ## [1.3.2] - 2026-07-02
 
 ### Added

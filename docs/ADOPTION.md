@@ -35,6 +35,7 @@ bash scripts/self_test.sh   # optional — verifies scaffold copy + agent sync
 
 ```bash
 npm ci && npm run validate   # coverage ≥90% + Playwright e2e
+grok mcp doctor playwright   # MCP UI checks (see docs/MCP_UI_VALIDATION.md)
 bash scripts/check_agent_sync.sh
 ```
 
@@ -46,8 +47,9 @@ See [QUICKSTART.md](QUICKSTART.md) for the full walkthrough with expected output
 
 1. `/pdd-plan` → `docs/plans/epic-hello.md` (one small feature)
 2. `/tdd-implement`
-3. `/cdd-review` (if T2)
-4. `/aysu-verify`
+3. `/ui-verify` — Grok MCP Playwright (snapshots + screenshots)
+4. `/cdd-review` (if T2)
+5. `/aysu-verify`
 5. Open PR using template
 
 ## 5. Grow over time

@@ -1,0 +1,15 @@
+# Project MCP servers — Grok loads this from repo root.
+# Run: grok mcp doctor playwright
+
+[mcp_servers.playwright]
+command = "npx"
+args = [
+    "-y",
+    "@playwright/mcp@latest",
+    "--headless",
+    "--browser=chromium",
+    "--caps=vision",
+    "--output-dir=playwright-mcp-output",
+]
+startup_timeout_sec = 60
+enabled = true

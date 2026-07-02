@@ -43,7 +43,7 @@ done
 mkdir -p "$TARGET/docs/plans" "$TARGET/contracts" "$TARGET/reviews" "$TARGET/scripts" "$TARGET/tests" "$TARGET/src"
 
 for f in METHODOLOGY.md ADOPTION.md COMPLETENESS.md PRD.md SRD.md TASKLIST.md ROADMAP.md \
-         QUICKSTART.md CASE_STUDY_ASTROSIM.md CUSTOMIZE_MONOREPO.md COMPARE.md DECISIONS.md SHARE.md; do
+         QUICKSTART.md CASE_STUDY_ASTROSIM.md CUSTOMIZE_MONOREPO.md MCP_UI_VALIDATION.md COMPARE.md DECISIONS.md SHARE.md; do
   copy_file "$SOURCE/docs/$f" "$TARGET/docs/$f"
 done
 copy_file "$SOURCE/docs/plans/TEMPLATE.md" "$TARGET/docs/plans/TEMPLATE.md"
