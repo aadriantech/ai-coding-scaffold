@@ -36,10 +36,19 @@ MCP is for **interactive** Grok checks. CI still runs:
 npm run test:e2e:ui   # or npm run test:e2e
 ```
 
+## Mandatory rule
+
+**Every UI task** must complete this skill before human validation and before `/aysu-verify`:
+- One **screenshot per route** in `playwright-mcp-output/` (via `browser_take_screenshot`)
+- One **snapshot** per route (via `browser_snapshot`) with pass/fail assertions
+
+Skipping screenshots is a **gate violation** — same severity as skipping tests.
+
 ## Must not
 
 - Ship UI changes with only MCP pass and broken `npm run test:e2e`
-- Skip screenshots when user asked for visual verification
+- Skip screenshots on any route in the checklist
+- Proceed to human validation without `UI_VERIFY` block
 
 ## Output
 

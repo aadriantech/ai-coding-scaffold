@@ -1,0 +1,26 @@
+---
+description: Mandatory MCP Playwright UI verification with screenshots before human validation
+globs:
+alwaysApply: true
+---
+
+## UI verification rule (mandatory)
+
+When a task touches **UI, pages, or user-visible layout**:
+
+1. **Before human validation** and **before AYSU** on UI work, run **`/ui-verify`** using **Grok MCP Playwright**.
+2. Preconditions:
+   - `grok mcp doctor playwright` → healthy
+   - `/mcps` → **playwright** enabled
+   - Dev app running (e.g. `npm run dev` on `:5173`)
+3. For **each route** in the plan or `docs/HUMAN_VALIDATION.md`:
+   - `browser_navigate` → open URL
+   - `browser_snapshot` → assert headings, links, data (accessibility tree)
+   - **`browser_take_screenshot`** → save PNG to `playwright-mcp-output/` (required — not optional)
+4. Also run **`npm run test:e2e`** (or project equivalent) for CI regression.
+5. Print **`UI_VERIFY`** block with screenshot paths before marking UI work done.
+
+**Do not** skip MCP screenshots and jump to manual browser testing.
+**Do not** ship UI changes with broken npm e2e.
+
+Reference: [docs/MCP_UI_VALIDATION.md](docs/MCP_UI_VALIDATION.md), skill `.grok/skills/ui-verify/SKILL.md`.

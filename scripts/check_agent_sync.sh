@@ -42,8 +42,10 @@ REQUIRED=(
   ".cursor/rules/ai-coding.mdc"
   ".grok/skills/pdd-plan/SKILL.md"
   ".grok/skills/tdd-implement/SKILL.md"
+  ".grok/skills/ui-verify/SKILL.md"
   ".grok/skills/cdd-review/SKILL.md"
   ".grok/skills/aysu-verify/SKILL.md"
+  ".cursor/rules/ui-mcp-playwright.mdc"
   ".grok/skills/memory-sync/SKILL.md"
   ".grok/skills/scaffold-init/SKILL.md"
 )

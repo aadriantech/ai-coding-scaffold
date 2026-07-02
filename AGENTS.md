@@ -8,12 +8,13 @@
 |------|------|----------|------|
 | 1 | **PDD** | `docs/plans/<epic>.md` | Plan complete; acceptance criteria numbered; implementation tasks at `1.1.1.1` depth |
 | 2 | **TDD** | `tests/` | Failing test first → green → refactor |
-| 3 | **CDD** | `reviews/<task-id>.md` | 0 open critical/high findings |
-| 4 | **AYSU** | PR / session summary | Structured block; confidence = high |
+| 3 | **UI** | `playwright-mcp-output/*.png` | **MCP Playwright** — snapshot + **screenshot** every route (UI tasks only) |
+| 4 | **CDD** | `reviews/<task-id>.md` | 0 open critical/high findings |
+| 5 | **AYSU** | PR / session summary | Structured block; confidence = high |
 
-**No plan → no code. No green tests → no CDD. No CDD approve → no AYSU.**
+**No plan → no code. No green tests → no CDD. No MCP UI screenshots → no human validation (UI tasks). No CDD approve → no AYSU.**
 
-Invoke skills: `/pdd-plan` → `/tdd-implement` → `/cdd-review` → `/aysu-verify`
+Invoke skills: `/pdd-plan` → `/tdd-implement` → `/ui-verify` → `/cdd-review` → `/aysu-verify`
 
 **RALF Loop is retired** in favor of this gated workflow. Rationale and future autonomous policy: [docs/DECISIONS.md](docs/DECISIONS.md).
 
@@ -43,6 +44,7 @@ Default unknown tasks to **T2**.
 | Planner | `pdd-plan` | `docs/plans/<epic>.md` | Code, tests |
 | Implementer | `tdd-implement` | `src/` + `tests/` | Skip tests, expand scope |
 | Critic | `cdd-review` | `reviews/<id>.md` | Implement fixes |
+| UI verifier | `ui-verify` | `UI_VERIFY` block + screenshots | Skip screenshots, ship on npm-only |
 | Verifier | `aysu-verify` | AYSU block | Ship on low confidence |
 
 ## Stack conventions
@@ -50,7 +52,8 @@ Default unknown tasks to **T2**.
 <!-- CUSTOMIZE: replace demo lib when your app grows -->
 - **Language:** TypeScript 6.x, `src/lib/` layout (demo utilities — swap for your stack)
 - **Unit tests:** Vitest — `npm test`, `npm run test:coverage` (≥90% on `src/lib/`)
-- **E2E:** Playwright — `npm run test:e2e` (serves `demo/` locally)
+- **E2E (CI):** Playwright — `npm run test:e2e` (serves `demo/` locally)
+- **UI (Grok):** MCP Playwright — `/ui-verify`; **screenshot every route** → `playwright-mcp-output/`
 - **Validate:** `npm run validate` (coverage gate + e2e)
 - Fix `src/`, not tests, when requirements are stable
 
@@ -63,6 +66,7 @@ AYSU:
   verified:
     - [ ] Plan acceptance criteria met
     - [ ] Tests green
+    - [ ] MCP UI verify + screenshots (UI tasks — `/ui-verify`)
     - [ ] Critic approve (T2+)
     - [ ] Section AGENT.md updated if behavior changed
   residual_risks: <list or "none">

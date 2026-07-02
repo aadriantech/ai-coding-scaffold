@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.4] - 2026-07-02
+
+### Added
+
+- **Mandatory UI rule** — MCP Playwright screenshots required before human validation (`.cursor/rules/ui-mcp-playwright.mdc`)
+- Pipeline step **UI** in `AGENTS.md` (PDD → TDD → **UI** → CDD → AYSU)
+- `ui-verify` in `check_agent_sync.sh`; AYSU checklist includes MCP screenshots
+
 ## [1.3.3] - 2026-07-02
 
 ### Added

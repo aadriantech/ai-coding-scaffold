@@ -4,7 +4,7 @@
 
 Portable **plan-before-code** infrastructure for Grok, Cursor, Claude Code, or any agentic IDE.
 
-**Version 1.3.3** — Grok MCP Playwright (`/ui-verify`) + npm e2e regression gates.
+**Version 1.3.4** — **Mandatory** MCP Playwright screenshots (`/ui-verify`) before human UI validation.
 
 ## How we built [AstroSim](https://github.com/aadriantech/astrosim) with this
 

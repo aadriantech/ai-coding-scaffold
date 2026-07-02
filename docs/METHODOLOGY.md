@@ -145,6 +145,18 @@ Must include: Problem, Interfaces, Edge cases, **numbered testable acceptance cr
 
 Fix application code, not tests, when the requirement is stable.
 
+### UI — MCP Playwright verification (UI tasks)
+
+**Gate:** before human validation and before AYSU on any UI-touching task.
+
+1. `grok mcp doctor playwright` → healthy; `/mcps` → enable playwright
+2. Start dev app; invoke **`/ui-verify`**
+3. Per route: `browser_navigate` → `browser_snapshot` (assert) → **`browser_take_screenshot`** (required)
+4. Save PNGs to `playwright-mcp-output/`; print `UI_VERIFY` block
+5. Run `npm run test:e2e` for regression
+
+See [MCP_UI_VALIDATION.md](MCP_UI_VALIDATION.md). Cursor rule: `.cursor/rules/ui-mcp-playwright.mdc`.
+
 ### CDD — Critic-Driven Design
 
 Critic does **not** implement fixes. Output: `reviews/<task-id>.md` per `contracts/critic_review.schema.md`.

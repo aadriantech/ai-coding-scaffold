@@ -27,6 +27,7 @@ AYSU:
   verified:
     - [ ] Plan acceptance criteria met
     - [ ] Tests green
+    - [ ] MCP UI verify + screenshots in playwright-mcp-output/ (UI tasks)
     - [ ] Critic approve (T2+)
     - [ ] Section AGENT.md synced (if behavior changed)
   residual_risks: <list or "none">

@@ -1,6 +1,8 @@
 # MCP Playwright UI validation
 
-Use **Grok + Playwright MCP** for interactive UI checks (snapshots + screenshots) before human validation. Use **npm Playwright** for CI regression gates.
+**Mandatory rule (UI tasks):** Grok must run **`/ui-verify`** with MCP Playwright and save **one screenshot per route** to `playwright-mcp-output/` before human validation or AYSU. npm `test:e2e` remains the CI regression gate.
+
+Use **Grok + Playwright MCP** for interactive UI checks (snapshots + screenshots). Use **npm Playwright** for CI regression gates.
 
 ## Setup (once per project)
 
