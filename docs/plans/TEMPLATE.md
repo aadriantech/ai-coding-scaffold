@@ -4,6 +4,7 @@ task_class: T2
 status: draft
 epic: "<short name>"
 spec_refs: []
+tasklist_ref: docs/TASKLIST.md
 approver: pending
 ---
 

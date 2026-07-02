@@ -25,6 +25,7 @@ bash scripts/self_test.sh   # optional — verifies scaffold copy + agent sync
 | `AGENT_INDEX.md` | Add domains as modules appear |
 | `docs/PRD.md` | Write product vision |
 | `docs/SRD.md` | Write technical requirements |
+| `docs/TASKLIST.md` | Break SRD into phased `1.1.1.1` tasks (see template) |
 | `tests/AGENT.md` | Set test runner command |
 | `.github/AGENT.md` | Document your CI workflows |
 | `.github/workflows/ci.yml` | Vitest + Playwright included — adapt paths to your app |
@@ -56,7 +57,7 @@ See [QUICKSTART.md](QUICKSTART.md) for the full walkthrough with expected output
 | First API | `contracts/<name>.schema.json` + contract tests |
 | First module | `src/<module>/AGENT.md` + AGENT_INDEX row |
 | Pre-release | `scripts/integrity_check.sh` + extend CI |
-| Phase tracking | `docs/ROADMAP.md` |
+| Phase tracking | `docs/ROADMAP.md` + `docs/TASKLIST.md` |
 
 ## Tool-specific
 

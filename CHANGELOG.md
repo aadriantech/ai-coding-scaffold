@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2] - 2026-07-02
+
+### Added
+
+- `docs/TASKLIST.md` template — phased granular backlog with `1.1.1.1` IDs, linked from PRD/SRD/plans
+- Tier 2 completeness now includes `TASKLIST.md` once SRD has real requirements
+
 ## [1.3.1] - 2026-07-02
 
 ### Added

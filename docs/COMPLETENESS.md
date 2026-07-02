@@ -24,7 +24,7 @@ Based on [AstroSim](https://github.com/aadriantech/astrosim) production experien
 - [ ] `.github/pull_request_template.md`
 - [ ] `.github/workflows/ci.yml` (agent memory + tests)
 - [ ] `tests/AGENT.md`, `.github/AGENT.md`
-- [ ] `docs/PRD.md`, `docs/SRD.md`
+- [ ] `docs/PRD.md`, `docs/SRD.md`, `docs/TASKLIST.md`
 - [ ] `reviews/TEMPLATE.md`
 
 ## Tier 3 — Production parity (AstroSim-level)

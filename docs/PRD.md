@@ -39,4 +39,5 @@
 ## Related
 
 - [SRD.md](SRD.md) — technical requirements derived from this PRD
-- Plans: `docs/plans/<epic>.md` (PDD references PRD sections)
+- [TASKLIST.md](TASKLIST.md) — granular phased backlog (required once SRD has real requirements)
+- Plans: `docs/plans/<epic>.md` (PDD references PRD sections; may set `tasklist_ref: docs/TASKLIST.md`)

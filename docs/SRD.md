@@ -1,7 +1,8 @@
 # System Requirements Document (SRD)
 
 **Date:** YYYY-MM-DD  
-**Derived from:** [PRD.md](PRD.md)
+**Derived from:** [PRD.md](PRD.md)  
+**Task List:** [`TASKLIST.md`](./TASKLIST.md) — granular build tasks (`1.1.1.1` IDs)
 
 ## 1. Introduction
 
@@ -24,7 +25,11 @@ Technical requirements for implementation and test design.
 - Configuration format:
 - Public API surface:
 
-## 5. Assumptions and constraints
+## 5. Task list
+
+Maintain **[`TASKLIST.md`](./TASKLIST.md)** for phased, atomic work items traced to SRD requirement IDs. Epics in `docs/plans/` slice subsets of this backlog.
+
+## 6. Assumptions and constraints
 
 -
 

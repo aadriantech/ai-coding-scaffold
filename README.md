@@ -4,7 +4,7 @@
 
 Portable **plan-before-code** infrastructure for Grok, Cursor, Claude Code, or any agentic IDE.
 
-**Version 1.3.1** — Vitest (≥90% coverage) + Playwright e2e, 4-level plan tasks, monorepo customize guide.
+**Version 1.3.2** — Vitest + Playwright, `TASKLIST.md` backlog template, monorepo customize guide.
 
 ## How we built [AstroSim](https://github.com/aadriantech/astrosim) with this
 
@@ -64,7 +64,7 @@ PDD (plan) → TDD (implement) → CDD (review) → AYSU (verify)
 | Category | Files |
 |----------|-------|
 | **Core** | `AGENTS.md`, `AGENT_INDEX.md`, `AGENT_TEMPLATE.md`, `CONTRIBUTING.md` |
-| **Specs** | `docs/PRD.md`, `docs/SRD.md`, `docs/ROADMAP.md` |
+| **Specs** | `docs/PRD.md`, `docs/SRD.md`, `docs/TASKLIST.md`, `docs/ROADMAP.md` |
 | **Plans** | `docs/plans/TEMPLATE.md`, `docs/plans/epic-example.md` |
 | **Reviews** | `reviews/TEMPLATE.md`, `contracts/critic_review.schema.md` |
 | **Memory stubs** | `src/AGENT.md`, `tests/AGENT.md`, `.github/AGENT.md` |
