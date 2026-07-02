@@ -45,7 +45,7 @@ Based on [AstroSim](https://github.com/aadriantech/astrosim) production experien
 | 0 | ✅ Complete |
 | 1 | ✅ Complete |
 | 2 | ✅ Complete |
-| 3 | ✅ Demo test suite + coverage/e2e CI; extend schemas and per-module memory per project |
+| 3 | ✅ Complete in-repo; monorepos customize via `docs/CUSTOMIZE_MONOREPO.md` |
 
 ## Gaps intentionally left to each project
 

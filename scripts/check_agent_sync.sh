@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Verify agent memory infrastructure exists.
+# Monorepo? Customize REQUIRED[] — see docs/CUSTOMIZE_MONOREPO.md (Astroforge example).
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"

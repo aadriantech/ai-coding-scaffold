@@ -43,7 +43,7 @@ done
 mkdir -p "$TARGET/docs/plans" "$TARGET/contracts" "$TARGET/reviews" "$TARGET/scripts" "$TARGET/tests" "$TARGET/src"
 
 for f in METHODOLOGY.md ADOPTION.md COMPLETENESS.md PRD.md SRD.md ROADMAP.md \
-         QUICKSTART.md CASE_STUDY_ASTROSIM.md COMPARE.md DECISIONS.md SHARE.md; do
+         QUICKSTART.md CASE_STUDY_ASTROSIM.md CUSTOMIZE_MONOREPO.md COMPARE.md DECISIONS.md SHARE.md; do
   copy_file "$SOURCE/docs/$f" "$TARGET/docs/$f"
 done
 copy_file "$SOURCE/docs/plans/TEMPLATE.md" "$TARGET/docs/plans/TEMPLATE.md"
@@ -76,6 +76,7 @@ done
 
 echo ""
 echo "Done. Next:"
-echo "  1. Customize docs/PRD.md, AGENTS.md, .github/workflows/ci.yml"
-echo "  2. bash scripts/check_agent_sync.sh"
-echo "  3. /pdd-plan for first epic"
+echo "  1. npm ci && npm run validate   # optional — coverage + Playwright e2e"
+echo "  2. Customize docs/PRD.md, AGENTS.md; monorepo → docs/CUSTOMIZE_MONOREPO.md"
+echo "  3. bash scripts/check_agent_sync.sh"
+echo "  4. /pdd-plan for first epic"

@@ -21,8 +21,9 @@ metadata:
 1. Classify task: T0–T3 (default T2).
 2. Copy `docs/plans/TEMPLATE.md` → `docs/plans/<epic>.md`.
 3. Fill all sections. Acceptance criteria must be testable and numbered.
-4. Link `contracts/` for any interface change; add `planned` row in `contracts/README.md`.
-5. Set frontmatter `status: ready` when complete.
+4. **Implementation tasks:** 4-level hierarchy (`1.1.1.1`). Every implementable path ends at level 4 with small, atomic context (target file, one action, expected outcome). No vague leaves — prevents hallucination during TDD.
+5. Link `contracts/` for any interface change; add `planned` row in `contracts/README.md`.
+6. Set frontmatter `status: ready` when complete.
 
 ## Must not
 
@@ -31,4 +32,4 @@ metadata:
 
 ## Output
 
-Path to plan file + task_class + numbered acceptance criteria list.
+Path to plan file + task_class + numbered acceptance criteria list + 4-level implementation task tree.

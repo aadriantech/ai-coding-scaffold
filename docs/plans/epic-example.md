@@ -44,6 +44,22 @@ Demonstrate the plan format for a trivial feature. Replace with real epics.
 
 > **Why:** Stops scope creep. Agent must not implement items listed here without a new plan.
 
+## Implementation tasks
+
+1. CLI flag plumbing
+   1.1. Argument parser
+       1.1.1. Add `--hello` flag
+           1.1.1.1. Edit `src/cli.py` `build_parser()` — add `--hello` store_true flag (AC #1)
+       1.1.2. Wire flag to output
+           1.1.2.1. Edit `src/cli.py` `main()` — if `args.hello`, print `"Hello"` to stdout (AC #1)
+   1.2. Tests
+       1.2.1. Hello flag test
+           1.2.1.1. Add `test_cli_hello_flag` in `tests/test_cli.py` — subprocess with `--hello`, assert stdout contains `"Hello"` (AC #1)
+       1.2.2. Regression guard
+           1.2.2.1. Run full test suite — all existing tests remain green (AC #2)
+
+> **Why:** 4-level hierarchy (`1.1.1.1`) keeps each implement step atomic and small-context. Agent works one leaf at a time; no guessing paths or APIs.
+
 ## Implementation notes
 
 T1: light plan, skip CDD unless promoted to T2.

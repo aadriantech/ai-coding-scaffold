@@ -16,12 +16,15 @@ metadata:
 
 ## Steps
 
-1. Read plan acceptance criteria.
-2. **Assert:** write failing test(s).
-3. Run tests — confirm FAIL for the right reason.
-4. **Launch:** minimal code change to green.
-5. Run full test suite.
-6. If behavior changed, update section `AGENT.md` §Verification status.
+1. Read plan acceptance criteria and **Implementation tasks** (4-level `1.1.1.1` hierarchy).
+2. Open a `todo_write` scaffold mirroring leaf task ids (e.g. `1.1.1.1`, `1.1.1.2`). Mark exactly one leaf `in_progress`.
+3. Implement **one leaf at a time** — use only the context in that row; do not invent files or APIs not named in the plan.
+4. **Assert:** write failing test(s) for the current leaf.
+5. Run tests — confirm FAIL for the right reason.
+6. **Launch:** minimal code change to green for the current leaf.
+7. Mark leaf completed; advance to next leaf. Repeat until all leaves done.
+8. Run full test suite.
+9. If behavior changed, update section `AGENT.md` §Verification status.
 
 ## Must not
 

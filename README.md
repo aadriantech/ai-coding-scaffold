@@ -4,7 +4,7 @@
 
 Portable **plan-before-code** infrastructure for Grok, Cursor, Claude Code, or any agentic IDE.
 
-**Version 1.3.0** — Vitest unit tests (≥90% coverage) + Playwright e2e, enforced in CI.
+**Version 1.3.1** — Vitest (≥90% coverage) + Playwright e2e, 4-level plan tasks, monorepo customize guide.
 
 ## How we built [AstroSim](https://github.com/aadriantech/astrosim) with this
 
@@ -31,7 +31,9 @@ Every AstroSim feature followed the same loop:
 | Grok skills | `.grok/skills/pdd-plan`, `tdd-implement`, etc. |
 | CI enforcement | `check_agent_sync.sh` + Vitest coverage gate + Playwright in GitHub Actions |
 
-AstroSim grew the scaffold to **Tier 3** (per-module memory, contract tests, coverage gates). This repo gives you **Tier 0–2 out of the box** plus Tier 3 templates — copy it, then extend as your project matures.
+AstroSim grew the scaffold to **Tier 3** (per-module memory, contract tests, coverage gates). [Astroforge](https://github.com/aadriantech/astroforge) (Space Pulse) proves the same pipeline on a **SvelteKit + Go monorepo** with CI coverage gates.
+
+This repo ships **Tier 0–3** out of the box — copy it, then customize per [docs/CUSTOMIZE_MONOREPO.md](docs/CUSTOMIZE_MONOREPO.md) if you use `apps/*` layout.
 
 **Pipeline:** **PDD → TDD → CDD → AYSU** — no plan → no code.
 
@@ -96,6 +98,7 @@ PDD (plan) → TDD (implement) → CDD (review) → AYSU (verify)
 | [METHODOLOGY.md](docs/METHODOLOGY.md) | Full PDD/TDD/CDD/AYSU reference |
 | [ADOPTION.md](docs/ADOPTION.md) | First-hour setup checklist |
 | [COMPLETENESS.md](docs/COMPLETENESS.md) | Tier 0–3 self-audit vs AstroSim |
+| [CUSTOMIZE_MONOREPO.md](docs/CUSTOMIZE_MONOREPO.md) | Adapt agent memory + CI for `apps/*` repos |
 | [CHANGELOG.md](CHANGELOG.md) | Release history |
 
 ## Completeness tiers
@@ -105,7 +108,7 @@ PDD (plan) → TDD (implement) → CDD (review) → AYSU (verify)
 | 0 | Minimum viable agent workflow | ✅ |
 | 1 | Solo developer | ✅ |
 | 2 | Team + PR workflow | ✅ |
-| 3 | Production (per-module memory, contracts, coverage) | ✅ Coverage + e2e in CI; extend per project |
+| 3 | Production (per-module memory, contracts, coverage) | ✅ Complete in-repo; monorepo → CUSTOMIZE_MONOREPO |
 
 See [docs/COMPLETENESS.md](docs/COMPLETENESS.md) for full checklist.
 

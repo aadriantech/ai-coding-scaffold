@@ -27,15 +27,17 @@ bash scripts/self_test.sh   # optional — verifies scaffold copy + agent sync
 | `docs/SRD.md` | Write technical requirements |
 | `tests/AGENT.md` | Set test runner command |
 | `.github/AGENT.md` | Document your CI workflows |
-| `.github/workflows/ci.yml` | Already includes Vitest + Playwright — adapt `src/lib/` and `e2e/` to your app |
+| `.github/workflows/ci.yml` | Vitest + Playwright included — adapt paths to your app |
+| `docs/CUSTOMIZE_MONOREPO.md` | **Required for `apps/*` monorepos** — customize `check_agent_sync.sh` |
 
 ## 3. Verify (2 min)
 
 ```bash
+npm ci && npm run validate   # coverage ≥90% + Playwright e2e
 bash scripts/check_agent_sync.sh
 ```
 
-Push to GitHub — `ci.yml` runs `check_agent_sync.sh` on PR/push.
+Push to GitHub — `ci.yml` runs agent memory, coverage, and e2e on PR/push.
 
 ## 4. First task (30 min)
 

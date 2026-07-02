@@ -132,7 +132,7 @@ Run `scripts/check_agent_sync.sh` to verify memory files exist. Use `/memory-syn
 
 Plan file: `docs/plans/<epic>.md` with frontmatter `status: ready` when complete.
 
-Must include: Problem, Interfaces, Edge cases, **numbered testable acceptance criteria**, Out of scope, CDD focus areas.
+Must include: Problem, Interfaces, Edge cases, **numbered testable acceptance criteria**, **Implementation tasks** (4-level `1.1.1.1` hierarchy — atomic leaves with file, action, outcome), Out of scope, CDD focus areas.
 
 ### TDD — Test-Driven Implementation
 

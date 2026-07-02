@@ -4,6 +4,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 MIN="${MIN_COVERAGE:-90}"
+export PATH="${HOME}/.local/node/bin:${PATH}"
 
 echo "=== Unit coverage (min ${MIN}%) ==="
 cd "$ROOT"

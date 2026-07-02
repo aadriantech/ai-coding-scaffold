@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.1] - 2026-07-02
+
+### Added
+
+- `docs/CUSTOMIZE_MONOREPO.md` — adapt `check_agent_sync.sh`, `AGENT_INDEX`, and CI for `apps/*` layout ([Astroforge](https://github.com/aadriantech/astroforge) reference)
+- **4-level implementation tasks** (`1.1.1.1`) in plan template, epic example, `pdd-plan` and `tdd-implement` skills, and `METHODOLOGY.md`
+- `self_test.sh` now runs `npm ci` + coverage on bootstrapped temp dir
+
+### Changed
+
+- `scaffold_init.sh` copies `CUSTOMIZE_MONOREPO.md`; post-bootstrap hints include `npm run validate`
+- `check_coverage.sh` exports Node PATH for CI/local parity
+
 ## [1.3.0] - 2026-07-01
 
 ### Added
