@@ -6,6 +6,8 @@ Derived from [AstroSim](https://github.com/aadriantech/astrosim). Five ideas: **
 
 **Why not RALF Loop?** We retired fully autonomous loops for gated PDD→TDD→CDD→AYSU. See [DECISIONS.md](DECISIONS.md) for rationale and a proposed policy-driven autonomous path (RALF v2).
 
+**Loop design patterns:** Rahul's 20 production loops mapped to this scaffold in [LOOP_PATTERNS.md](LOOP_PATTERNS.md). On gate failure use `/reflexion` before retry.
+
 ---
 
 ## 1. The pipeline (PDD → TDD → CDD → AYSU)

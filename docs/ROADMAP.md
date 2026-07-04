@@ -7,6 +7,7 @@
 | Phase | Theme | Version |
 |-------|-------|---------|
 | 0 | Agent scaffold adopted | — |
+| 1.4 | Loop patterns — reflexion, error library, multi-critic CDD | 2026-07 |
 
 ## Planned
 

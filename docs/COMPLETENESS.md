@@ -12,8 +12,10 @@ Based on [AstroSim](https://github.com/aadriantech/astrosim) production experien
 
 ## Tier 1 — Solo developer (recommended)
 
-- [ ] All six skills (pdd, tdd, cdd, aysu, memory-sync, scaffold-init)
-- [ ] `docs/METHODOLOGY.md`
+- [ ] Core skills (pdd, tdd, ui-verify, cdd, aysu, memory-sync, scaffold-init)
+- [ ] Loop skills (reflexion, error-sync) — v1.4+
+- [ ] `docs/METHODOLOGY.md`, `docs/LOOP_PATTERNS.md`
+- [ ] `docs/errors/INDEX.md`, `docs/patterns/SUCCESS.md`
 - [ ] `contracts/critic_review.schema.md`
 - [ ] `scripts/check_agent_sync.sh`
 - [ ] `reviews/` directory

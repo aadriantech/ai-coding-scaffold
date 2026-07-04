@@ -14,7 +14,8 @@
 
 **No plan → no code. No green tests → no CDD. No MCP UI screenshots → no human validation (UI tasks). No CDD approve → no AYSU.**
 
-Invoke skills: `/pdd-plan` → `/tdd-implement` → `/ui-verify` → `/cdd-review` → `/aysu-verify`
+Invoke skills: `/pdd-plan` → `/tdd-implement` → `/ui-verify` → `/cdd-review` → `/aysu-verify`  
+On failure: `/reflexion` → `/error-sync` (optional) → retry from TDD
 
 **RALF Loop is retired** in favor of this gated workflow. Rationale and future autonomous policy: [docs/DECISIONS.md](docs/DECISIONS.md).
 
@@ -44,6 +45,7 @@ Default unknown tasks to **T2**.
 | Planner | `pdd-plan` | `docs/plans/<epic>.md` | Code, tests |
 | Implementer | `tdd-implement` | `src/` + `tests/` | Skip tests, expand scope |
 | Critic | `cdd-review` | `reviews/<id>.md` | Implement fixes |
+| Reflector | `reflexion` | `reviews/<id>-reflection.md` | Skip reflection on loop-back |
 | UI verifier | `ui-verify` | `UI_VERIFY` block + screenshots | Skip screenshots, ship on npm-only |
 | Verifier | `aysu-verify` | AYSU block | Ship on low confidence |
 
@@ -79,4 +81,6 @@ AYSU:
 - Contributing: [CONTRIBUTING.md](CONTRIBUTING.md)
 - Adoption: [docs/ADOPTION.md](docs/ADOPTION.md)
 - Completeness: [docs/COMPLETENESS.md](docs/COMPLETENESS.md)
+- Loop patterns: [docs/LOOP_PATTERNS.md](docs/LOOP_PATTERNS.md)
+- Error library: [docs/errors/INDEX.md](docs/errors/INDEX.md)
 - Section template: [AGENT_TEMPLATE.md](AGENT_TEMPLATE.md)

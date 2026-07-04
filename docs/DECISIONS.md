@@ -135,8 +135,29 @@ Plans, reviews, and AGENT.md files are versioned truth. Grok/Cursor/Claude skill
 
 ---
 
+## ADR-005: Loop patterns as scaffold evolution map
+
+**Status:** Accepted (v1.4)  
+**Source:** [Rahul — 20 Loop Design Patterns](https://x.com/sairahul1/status/2072258045460226373) (July 2026)
+
+### Decision
+
+1. Map external loop taxonomy in [LOOP_PATTERNS.md](LOOP_PATTERNS.md).
+2. Ship memory loops as files: `docs/errors/INDEX.md`, `docs/patterns/SUCCESS.md`.
+3. Add `/reflexion` and `/error-sync` skills; multi-critic lenses in CDD template.
+4. RALF v2 auto-apply requires CI constraint satisfaction (#15), not model confidence.
+
+### Shipped (v1.4)
+
+- `reflexion`, `error-sync` skills
+- Multi-critic `reviews/TEMPLATE.md`
+- Optional AYSU `attempts` / `loop_back_count`
+
+---
+
 ## Related
 
 - [METHODOLOGY.md](METHODOLOGY.md) — pipeline reference
+- [LOOP_PATTERNS.md](LOOP_PATTERNS.md) — 20 patterns × scaffold
 - [CASE_STUDY_ASTROSIM.md](CASE_STUDY_ASTROSIM.md) — proof on real project
 - [COMPARE.md](COMPARE.md) — vs spec-kit, BMAD

@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.4.0] - 2026-07-03
+
+### Added
+
+- **Loop patterns** — `docs/LOOP_PATTERNS.md` (Rahul 20 patterns × PDD→TDD→CDD→AYSU); **ADR-005** in `DECISIONS.md`
+- **Memory loops** — `docs/errors/INDEX.md`, `docs/patterns/SUCCESS.md`
+- **Skills** — `/reflexion`, `/error-sync`
+- **Multi-critic CDD** — four lenses in `reviews/TEMPLATE.md` (correctness · security · a11y · contracts)
+- **AYSU metrics** — optional `attempts`, `loop_back_count` in verify block
+
+### Changed
+
+- `AGENT_INDEX.md` — `LOOP`, `ERR` domains; `scaffold_init.sh` copies new docs
+- `check_agent_sync.sh` — validates loop artifacts and skills
+
 ## [1.3.4] - 2026-07-02
 
 ### Added

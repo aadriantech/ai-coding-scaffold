@@ -12,11 +12,22 @@ recommendation: revise
 score: 0
 notes:
 
+## Multi-critic lenses (loop pattern #3)
+
+Score each 0–2 (0=fail, 1=gap, 2=pass). Any 0 on critical/high area → `revise`.
+
+| Lens | Score | Notes |
+|------|-------|-------|
+| Correctness — criteria met, tests map | | |
+| Security — secrets, injection, auth | | |
+| A11y — labels, keyboard, contrast (UI) | | |
+| Contracts — schemas/APIs synced | | |
+
 ## Findings
 
-| ID | Severity | Area | Finding | Suggested fix |
+| ID | Severity | Lens | Finding | Suggested fix |
 |----|----------|------|---------|---------------|
-| F1 | low | | | |
+| F1 | low | correctness | | |
 
 ## Checks
 

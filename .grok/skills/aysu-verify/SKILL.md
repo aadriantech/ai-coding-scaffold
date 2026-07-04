@@ -32,10 +32,12 @@ AYSU:
     - [ ] Section AGENT.md synced (if behavior changed)
   residual_risks: <list or "none">
   loop_back: no
+  attempts: <n>
+  loop_back_count: <n>
 ```
 
 4. **confidence: high** only if all boxes checked.
-5. If medium/low → loop back to implementer.
+5. If medium/low → invoke `/reflexion` before retry; set `loop_back: yes`.
 
 ## Must not
 

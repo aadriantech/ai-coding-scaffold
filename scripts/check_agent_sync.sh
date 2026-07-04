@@ -17,6 +17,9 @@ REQUIRED=(
   "contracts/critic_review.schema.md"
   "contracts/api.schema.template.json"
   "docs/METHODOLOGY.md"
+  "docs/LOOP_PATTERNS.md"
+  "docs/errors/INDEX.md"
+  "docs/patterns/SUCCESS.md"
   "docs/ADOPTION.md"
   "docs/COMPLETENESS.md"
   "docs/PRD.md"
@@ -48,6 +51,8 @@ REQUIRED=(
   ".cursor/rules/ui-mcp-playwright.mdc"
   ".grok/skills/memory-sync/SKILL.md"
   ".grok/skills/scaffold-init/SKILL.md"
+  ".grok/skills/reflexion/SKILL.md"
+  ".grok/skills/error-sync/SKILL.md"
 )
 
 missing=0

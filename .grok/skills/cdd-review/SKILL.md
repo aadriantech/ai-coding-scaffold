@@ -22,9 +22,10 @@ You are the **critic**, not the implementer. Do not implement fixes.
 ## Steps
 
 1. Map each acceptance criterion → test coverage. Flag gaps.
-2. File findings with severity (critical/high/medium/low).
-3. Write `reviews/<task-id>.md` using schema.
-4. Set `recommendation: approve` only if zero open critical/high.
+2. Score **multi-critic lenses** in `reviews/TEMPLATE.md`: correctness · security · a11y · contracts.
+3. File findings with severity (critical/high/medium/low) and lens column.
+4. Write `reviews/<task-id>.md` using schema.
+5. Set `recommendation: approve` only if zero open critical/high.
 
 ## Output
 

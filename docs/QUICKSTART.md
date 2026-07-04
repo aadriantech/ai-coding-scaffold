@@ -19,7 +19,7 @@ bash scripts/check_agent_sync.sh
 Expected output:
 
 ```
-Agent memory check OK (39 files)
+Agent memory check OK (46 files)
 ```
 
 Optional:
